@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Minimal configuration</title>
+
+        <input-field type="text">
+            <name>name</name>
+            <label>Name</label>
+            <defaultValue>tpp</defaultValue>
+        </input-field>
+
+        <input-field type="single-select">
+            <name>size</name>
+            <label>Size</label>
+            <defaultValue>XL</defaultValue>
+            <options>
+                <option>
+                    <id>XL</id>
+                    <name>Extra Large</name>
+                </option>
+                <option>
+                    <id>L</id>
+                    <name>Large</name>
+                </option>
+            </options>
+        </input-field>
+
+        <component name="sw-entity-multi-id-select">
+            <name>multipleProducts</name>
+            <entity>product</entity>
+            <label>Select products</label>
+        </component>
+
+        <component name="sw-media-field">
+            <name>pluginMedia</name>
+            <label>Upload media</label>
+        </component>
+
+        <component name="sw-txt-editor">
+            <name>txtEditor</name>
+            <label>Description</label>
+        </component>
+
+        <component name="sw-snippet-field">
+            <name>snippetField</name>
+            <label>Snippet</label>
+            <snippet>tpp.basic.snippet</snippet>
+        </component>
+    </card>
+
+    <card>
+        <title>Advanced Configuration</title>
+        <title lang="de-DE">Erweiterte Einstellungen</title>
+
+        <input-field type="password">
+            <name>secret</name>
+            <label>Secret token</label>
+            <label lang="de-DE">Geheimschlüssel</label>
+            <helpText>Your secret token for xyz...</helpText>
+            <helpText lang="de-DE">Dein geheimer Schlüssel für xyz...</helpText>
+        </input-field>
+    </card>
+
+</config>
